@@ -78,16 +78,17 @@ const gameController = ((square)=>{
         const boardRow = gameBoard.row;
         const boardColumn = gameBoard.column;
         const boardDiagonal = gameBoard.diagonal;
-        console.log(boardDiagonal)
 
+        if (gameOver === true) return;
         if (square.textContent !== '') return;
         
-
         gameBoard.markSquare(square, currentPlayer.token);
         
         switchPlayers();
 
         const checkWin = () =>{
+            const isTie = boardRow.every(row => row.every(square => square.textContent !== ''));
+           
             
             for(b = 0; b<3; b++){
                 if (boardRow[b].map(square => square.textContent).join('') === winCondition) {
@@ -106,8 +107,12 @@ const gameController = ((square)=>{
                     return;
                 }                                   
             }
-        
-        }
+               
+            if (isTie && !gameOver) {
+                prompt("It's a tie!");
+                gameOver = true;
+            }
+        }    
         checkWin();
 
                
