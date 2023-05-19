@@ -10,20 +10,39 @@
 </head>
 <body>
     <main>  
-        <h1> TIC-TAC-TOE !</h1>
-        <div id="board" data-attribute="board">
-            <div class="square" data-attribute="square"></div>
-            <div class="square" data-attribute="square"></div>
-            <div class="square" data-attribute="square"></div>
-            <div class="square" data-attribute="square"></div>
-            <div class="square" data-attribute="square"></div>
-            <div class="square" data-attribute="square"></div>
-            <div class="square" data-attribute="square"></div>
-            <div class="square" data-attribute="square"></div>
-            <div class="square" data-attribute="square"></div>
+        <div id="form" data-attribute="form">
+            <div class = 'title'>
+                <h1> TIC-TAC-TOE !</h1>
+            </div>
+            <div class="players">
+                
+                    <form class= "players"data-attribute="formulary">
+                        <h3>Player One Name</h3>
+                        <input type="text" class="custom-input" placeholder="Insert Your name">
+                        <h3>Player Two Name</h3>
+                        <input type="text" class="custom-input" placeholder="Insert Your name">
+                        <button type="submit" ><h1>START</h1></button>
+                    </form>
+
+            </div>
+
+        </div>
+        <div class="game-section">
+           
+            <div id="board" data-attribute="board">
+                <div class="square" data-attribute="square"></div>
+                <div class="square" data-attribute="square"></div>
+                <div class="square" data-attribute="square"></div>
+                <div class="square" data-attribute="square"></div>
+                <div class="square" data-attribute="square"></div>
+                <div class="square" data-attribute="square"></div>
+                <div class="square" data-attribute="square"></div>
+                <div class="square" data-attribute="square"></div>
+                <div class="square" data-attribute="square"></div>
+            </div>
         </div>
 
-        
+
     </main>
 
     <script src="script.js"></script>
