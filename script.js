@@ -1,3 +1,7 @@
+const form = document.querySelector('[data-attribute="formulary"]');
+
+
+
 const createPlayers = (playerOneName ='Player One', playerTwoName = 'Player Two') =>{   
 
     const players = [
@@ -18,7 +22,9 @@ const gameBoard = (()=>{
     
     const row = []
     const column = []
-    const diagonal = [[squares[0], squares[4], squares[8]], [squares[0], squares[4], squares[8]], [squares[2], squares[4], squares[6]]]
+    const diagonal = [[squares[0], squares[4], squares[8]], 
+    [squares[0], squares[4], squares[8]], 
+    [squares[2], squares[4], squares[6]]]
 
     
     for(i=0; i< squares.length; i+=3){
@@ -60,8 +66,11 @@ const gameBoard = (()=>{
 
 
 
-const gameController = ((square)=>{
-    const players = createPlayers()
+const gameController = (()=>{
+   
+   
+   
+   
     let activePlayer = players[0]
     let gameOver = false;
     
@@ -73,6 +82,7 @@ const gameController = ((square)=>{
 
 
     const playRound = (square) =>{
+        console.log(players)
         const currentPlayer = activePlayer;
         const winCondition = currentPlayer.token.repeat(3);
         const boardRow = gameBoard.row;
@@ -87,6 +97,7 @@ const gameController = ((square)=>{
         switchPlayers();
 
         const checkWin = () =>{
+            console.log(currentPlayer)
             const isTie = boardRow.every(row => row.every(square => square.textContent !== ''));
            
             
