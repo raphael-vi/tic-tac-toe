@@ -18,18 +18,24 @@
                 
                     <form class= "players"  data-attribute='formulary'>
                         <h3>Player One Name</h3>
-                        <input type="text" class="custom-input" name ='player1'placeholder="Insert Your name">
+                        <input type="text" class="custom-input" data-attribute='playerOne' placeholder="Insert Your name">
                         <h3>Player Two Name</h3>
-                        <input type="text" class="custom-input2" name ='player2'placeholder="Insert Your name">
-                        <button type="submit" ><h1>START</h1></button>
+                        <input type="text" class="custom-input2" data-attribute='playerTwo'  placeholder="Insert Your name">
+                        <button type="submit" data-attribute="button" ><h1>START</h1></button>
                     </form>
 
             </div>
 
         </div>
         <div class="game-section">
+                
+               <h1 data-attribute="pOneDisplay">Player One: X</h1> 
+               <h2>VS</h2>
+               <h1 data-attribute="pTwoDisplay">Player Two: O</h1>
            
-            <div id="board" data-attribute="board">
+           
+           <div id="board" data-attribute="board">
+            
                 <div class="square" data-attribute="square"></div>
                 <div class="square" data-attribute="square"></div>
                 <div class="square" data-attribute="square"></div>
@@ -39,6 +45,11 @@
                 <div class="square" data-attribute="square"></div>
                 <div class="square" data-attribute="square"></div>
                 <div class="square" data-attribute="square"></div>
+
+            </div>
+            <h1 class="players-display"></h1class></h1>
+            <div class="round-display" data-attribute="round-display">
+
             </div>
         </div>
 

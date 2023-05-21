@@ -28,18 +28,26 @@ main{
     margin-bottom: 10px;
 }
 
-.players > button{
+button{
     border-style: none;
     border-radius: 8px;
     padding: 8px;
     color: red;
 }
-.players > button:hover{
+button:hover{
     background-color: rgb(48, 133, 202);
     color: white;
     cursor: pointer;
 }
 
+.players-display{
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    font-size: larger;
+    font-weight: bolder;
+    
+}
 .title{
     justify-content: center;
     align-items: center;
@@ -108,3 +116,23 @@ input:focus {
     
 }
 
+.round-display{
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    align-items: center;
+    gap: 8px;
+    
+}
+
+.round-display > button{
+    padding: 8px;
+    font-weight: 780;
+    font-size: larger;
+}
+
+.restart:hover{
+    background-color: rgb(231, 61, 61);
+    color: rgb(255, 255, 255)
+}
